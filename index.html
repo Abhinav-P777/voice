@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Spectrum Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            text-align: center;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            background-color: #000;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #saveBtn {
+            display: none;
+        }
+        #pitchControl {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Audio Spectrum Visualizer</h1>
+        <button id="startBtn">Start Recording</button>
+        <button id="stopBtn" disabled>Stop Recording</button>
+        <a id="saveBtn" href="#" download="recording.webm">Save Recording</a>
+        <canvas id="spectrum" width="800" height="400"></canvas>
+        <label for="pitchControl">Pitch Control</label>
+        <input type="range" id="pitchControl" min="0.5" max="2" step="0.01" value="1">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
